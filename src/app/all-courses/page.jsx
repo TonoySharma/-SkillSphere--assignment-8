@@ -11,6 +11,7 @@ const AllCoursesPage = async () => {
             <h1 className='text-center my-5 text-3xl font-bold'>🔥 Popular Courses</h1>
 
             <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+                
                 {
                     photos.map(photo => <PhotoCard key={photo.ind} photo={photo}>
 

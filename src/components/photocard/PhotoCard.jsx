@@ -37,7 +37,7 @@ const PhotoCard = ({ photo }) => {
                         <FcRating />
                         {photo.rating}
                     </p>
-                    <Link href="/details">
+                    <Link href={`all-courses/${photo.id}`}>
                         <Button
                             variant="outline"
                             className="
