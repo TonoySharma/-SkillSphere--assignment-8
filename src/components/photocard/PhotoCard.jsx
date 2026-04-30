@@ -7,10 +7,10 @@ import { FcRating } from "react-icons/fc";
 
 const PhotoCard = ({ photo }) => {
     return (
-        <Card className="p-4 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 group">
+        <Card className="p-4 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 group border bg-gray-100">
 
             {/* Image */}
-            <div className="overflow-hidden rounded-xl">
+            <div className="overflow-hidden rounded-2xl">
                 <Image
                     src={photo.image}
                     alt={photo.title}
@@ -29,7 +29,7 @@ const PhotoCard = ({ photo }) => {
                 </h2>
 
                 <p className="text-sm text-gray-500">
-                    Instructor: {photo.instructor}
+                    <span className="font-medium text-gray-600">Instructor:</span> {photo.instructor}
                 </p>
 
                 <div className="flex items-center justify-between mt-2">

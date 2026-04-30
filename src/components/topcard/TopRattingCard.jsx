@@ -10,8 +10,8 @@ const TopRattingCard = async () => {
     .slice(0, 3);
 
   return (
-    <div className="mt-10">
-      <h1 className="font-bold text-3xl my-5">⭐ Top Rated Courses</h1>
+    <div className="mt-10 px-3 sm:px-4 md:px-0">
+      <h1 className="font-bold text-3xl my-5 text-center">⭐ Top Rated Courses</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto gap-6">
         {topPhotos.map((photo, index) => (

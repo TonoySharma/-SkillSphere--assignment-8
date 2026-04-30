@@ -1,28 +1,59 @@
-import { Button } from "@heroui/react";
+"use client";
+
+import { Zoom } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 import Link from "next/link";
+import { Button } from "@heroui/react";
+
+const images = [
+  "https://i.ibb.co/CptJWkkJ/wes-hicks-4-Ee-Tna-C1-S4-unsplash.jpg",
+  "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1758873272808-5580ed7deb44?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://i.ibb.co/1YGJ2Zh5/jakub-zerdzicki-Lq1-Dhx-Ameok-unsplash.jpg",
+  "https://i.ibb.co/XrqP2xmb/lucas-law-ec-ELcxm-JTk4-unsplash.jpg",
+
+];
 
 const Banner = () => {
   return (
-    <div className="bg-[url('https://i.pinimg.com/1200x/8a/fe/83/8afe83b98f339de4c1dd34fde26a86d0.jpg')] h-[60vh] w-full bg-cover bg-no-repeat bg-center flex items-center rounded-lg shadow-2xl max-w-7xl mx-auto">
-      {/* Overlay */}
-      <div className="w-full h-full rounded-lg bg-black/50 flex items-center ">
-        <div className="max-w-7xl mx-auto px-6 text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 max-w-2xl">
-            Upgrade Your Skills Today
-          </h1>
-          <p className="text-lg md:text-xl mb-6 max-w-xl text-gray-200 text-center justify-center flex">
-           Learn from Industry Experts
-          </p>
+    <div className="w-full h-[600px] md:h-[550px] overflow-hidden rounded mt-5 px-3 sm:px-4 md:px-0">
+      <Zoom scale={1.4} indicators={true}>
+        {images.map((img, index) => (
+          <div key={index} className="relative w-full h-full md:h-[550px]">
 
-          <div className="flex gap-4 items-center justify-center">
-            <Link href="#">
-              <Button className=" bg-blue-100 text-black border border-blue-400 hover:bg-blue-500 hover:text-white rounded-xl transform">
-               Explore Courses
-              </Button>
-            </Link>
+            {/* Image */}
+            <img
+              src={img}
+              alt="Slide"
+              className="w-full h-full object-cover"
+            />
+
+            {/* Dark overlay */}
+            <div className="absolute inset-0 bg-black/60"></div>
+
+            {/* Content */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4">
+              <h1 className="text-3xl md:text-5xl font-bold mb-4">
+                Upgrade Your Skills Today
+              </h1>
+
+              <p className="text-sm md:text-lg mb-6 max-w-2xl">
+               Learn from Industry Experts
+              </p>
+
+              <Link
+                href="/courses"
+                className="px-3 py-1 rounded-full text-white font-medium 
+                  bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 
+                  hover:from-red-500 hover:to-purple-600 
+                  transition duration-300 shadow-lg">
+                <Button variant=""> Start Learning</Button>
+
+              </Link>
+            </div>
           </div>
-        </div>
-      </div>
+        ))}
+      </Zoom>
     </div>
   );
 };

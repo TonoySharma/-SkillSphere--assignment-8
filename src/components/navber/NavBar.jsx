@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -6,30 +6,33 @@ import { authClient } from "../../lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
 import { PiSignOutFill } from "react-icons/pi";
 import NavLink from "../NavLink";
+import { useState } from "react";
 
 const NavBar = () => {
   const userData = authClient.useSession();
-  // console.log(usrData,  'usrData')
-  const user = userData.data?.user
-  // console.log(user, 'user')
+  const user = userData.data?.user;
 
- const handleSignOut = async () => {
-  await authClient.signOut();
- }
+  const [open, setOpen] = useState(false);
 
+  const handleSignOut = async () => {
+    await authClient.signOut();
+  };
 
   return (
     <div className="border-b px-2 sticky top-0 z-40 bg-gray-100">
-      <nav className=" flex justify-between items-center  py-3 max-w-7xl mx-auto w-full">
+      <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full">
+
+        {/* Logo */}
         <div className="flex gap-2 items-center">
           <Image
-            src={"/favicon.png"}
+            src={"/nav.png"}
             alt="logo"
             loading="eager"
-            width={50}
-            height={50}
+            width={60}
+            height={60}
             className="object-cover h-auto w-auto rounded-full"
           />
+
           <h3 className="text-2xl font-bold bg-gradient-to-r via-purple-500 to-sky-500 bg-clip-text text-transparent">
             <Link href={"/"}>
               <span className="text-black">Skill</span>Sphere
@@ -37,51 +40,100 @@ const NavBar = () => {
           </h3>
         </div>
 
-        <ul className="flex items-center gap-5 text-sm font-medium">
-          <li>
-            <NavLink href={"/"}>Home</NavLink>
-          </li>
-          <li>
-            <NavLink href={"/all-courses"}>All Courses</NavLink>
-          </li>
-          <li>
-            <NavLink href={"/profile"}>Profile</NavLink>
-          </li>
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex items-center gap-5 text-sm font-medium">
+          <li><NavLink href={"/"}>Home</NavLink></li>
+          <li><NavLink href={"/all-courses"}>All Courses</NavLink></li>
+          <li><NavLink href={"/profile"}>Profile</NavLink></li>
         </ul>
 
-        <div className="flex gap-5 ">
-          {!user && <ul className="flex items-center  text-sm ">
-            <li>
-              <Link className="border py-1 px-3 rounded-4xl mr-3 
-               border-purple-400 bg-purple-100 hover:bg-purple-500
-                hover:text-white transform duration-200"  href={"/signup"}> 
-                 Register</Link>
-                
-            </li>
-            <li>
-              <Link className="border py-1 px-3 rounded-4xl border-purple-400
-               bg-purple-100 hover:bg-purple-500 hover:text-white transform
-                duration-200" href={"/login"}> LogIn</Link>
-            </li>
-          </ul>}
+        {/* Right Side */}
+        <div className="hidden md:flex gap-5 items-center">
 
-          {
-            user && <div className="flex gap-4">
+          {!user && (
+            <ul className="flex items-center text-sm">
+              <li>
+                <Link className="border py-1 px-3 rounded-4xl mr-3 border-purple-400 bg-purple-100 hover:bg-purple-500 hover:text-white transition" href={"/signup"}>
+                  Register
+                </Link>
+              </li>
+              <li>
+                <Link className="border py-1 px-3 rounded-4xl border-purple-400 bg-purple-100 hover:bg-purple-500 hover:text-white transition" href={"/login"}>
+                  LogIn
+                </Link>
+              </li>
+            </ul>
+          )}
+
+          {user && (
+            <div className="flex gap-4 items-center">
               <Avatar size="sm">
-                <Avatar.Image alt="John Doe" src={user?.image} referrerPolicy="no-referrer" className=""  />
-                <Avatar.Fallback>{user?.name [0]}</Avatar.Fallback>
+                <Avatar.Image
+                  alt="user"
+                  src={user?.image}
+                  referrerPolicy="no-referrer"
+                />
+                <Avatar.Fallback>{user?.name?.[0]}</Avatar.Fallback>
               </Avatar>
 
-             <Button size="sm" className='py-1 px-3 rounded-4xl mr-3 text-black border 
-               border-purple-400 bg-purple-100 hover:bg-purple-500
-                hover:text-white transform duration-200' onClick={handleSignOut}>
-              Log out
-              <PiSignOutFill />
-            </Button>
+              <Button
+                size="sm"
+                className="py-1 px-3 rounded-4xl text-black border border-purple-400 bg-purple-100 hover:bg-purple-500 hover:text-white transition"
+                onClick={handleSignOut}
+              >
+                Log out <PiSignOutFill />
+              </Button>
             </div>
-          }
+          )}
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden text-2xl"
+        >
+          ☰
+        </button>
       </nav>
+
+      {/* Mobile Menu */}
+      {open && (
+        <div className="md:hidden px-4 pb-4 space-y-3">
+
+          <div className="flex flex-col gap-2 text-sm font-medium">
+            <NavLink href={"/"}>Home</NavLink>
+            <NavLink href={"/all-courses"}>All Courses</NavLink>
+            <NavLink href={"/profile"}>Profile</NavLink>
+          </div>
+
+          {!user && (
+            <div className="flex gap-3 mt-3">
+              <Link className="border py-1 px-3 rounded-4xl border-purple-400 bg-purple-100" href={"/signup"}>
+                Register
+              </Link>
+              <Link className="border py-1 px-3 rounded-4xl border-purple-400 bg-purple-100" href={"/login"}>
+                Login
+              </Link>
+            </div>
+          )}
+
+          {user && (
+            <div className="flex items-center justify-between mt-3">
+              <div className="flex items-center gap-2">
+                <Avatar size="sm">
+                  <Avatar.Image src={user?.image} />
+                  <Avatar.Fallback>{user?.name?.[0]}</Avatar.Fallback>
+                </Avatar>
+                <span className="text-sm">{user?.name}</span>
+              </div>
+
+              <Button size="sm" onClick={handleSignOut}>
+                Logout <PiSignOutFill />
+              </Button>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 };

@@ -1,5 +1,6 @@
-import { Card } from '@heroui/react';
+import { Button, Card } from '@heroui/react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { FcRating } from 'react-icons/fc';
 
@@ -15,9 +16,9 @@ const DetailsCardPage = async ({params}) => {
     //  console.log(photo );
     
     return (
-      <div className="px-4 mt-10 flex justify-center">
-      <Card className="p-5 border rounded-xl shadow-md w-[650px] hover:shadow-lg transition-all duration-300">
-
+      <div className=" mt-5 flex justify-center px-3 sm:px-4 md:px-0 mb-5">
+      <Card className="p-5 border bg-gray-100 rounded-xl shadow-md w-[650px]
+       hover:shadow-lg transition-all duration-300 ">
         {/* Image */}
         <div className="relative w-full h-[300px] mb-4">
           <Image

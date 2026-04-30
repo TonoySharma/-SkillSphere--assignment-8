@@ -9,10 +9,11 @@ const ProfilePage = () => {
     const user = userData.data?.user
     //   console.log(user, 'user')
     return (
-        <div>
-            <Card className="max-w-md mx-auto rounded-xl border my-5 p-6 flex justify-center items-center">
+        <div className='px-3 sm:px-4 md:px-0'>
+            <Card className="max-w-md mx-auto rounded-xl border my-5
+             p-6 flex justify-center items-center mb-50 ">
 
-                <Avatar className="h-32 w-32 ring-4 ring-purple-200">
+                <Avatar className="h-30 w-30 ring-4 ring-purple-200">
                     <Avatar.Image
                         alt={user?.name || "User"}
                         src={user?.image}
@@ -24,8 +25,8 @@ const ProfilePage = () => {
                 </Avatar>
 
                 <h2 className='text-xl font-semibold'>Name:{user?.name}</h2>
-                <p className='font-medium'>Email:{user?.email}</p>
-                <p className="text-gray-600 text-sm text-center">
+                <p className='font-medium '>Email: <span className='text-gray-600'>{user?.email}</span></p>
+                <p className="text-gray-500 text-sm text-center font-medium">
                     {user?.bio || "No bio added yet."}
                 </p>
 
