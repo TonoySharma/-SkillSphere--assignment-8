@@ -30,9 +30,9 @@ const NavBar = () => {
             height={50}
             className="object-cover h-auto w-auto"
           />
-          <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+          <h3 className="text-2xl font-bold bg-gradient-to-r via-purple-500 to-sky-500 bg-clip-text text-transparent">
             <Link href={"/"}>
-              SkillSphere
+              <span className="text-black">Skill</span>Sphere
             </Link>
           </h3>
         </div>

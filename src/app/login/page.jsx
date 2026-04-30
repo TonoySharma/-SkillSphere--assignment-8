@@ -10,7 +10,6 @@ import {
     Label,
     TextField,
 } from "@heroui/react";
-import Link from "next/link";
 import { useState } from "react";
 import { authClient, signIn, signUp } from "../../lib/auth-client";
 import { FcGoogle } from "react-icons/fc";
@@ -42,7 +41,7 @@ const LoginPage = () => {
         }
     };
 
-    const handleGoogle = async () => {
+    const handleGoogleLogin = async () => {
         await authClient.signIn.social({
             provider: "google",
         });
@@ -138,7 +137,7 @@ const LoginPage = () => {
                             Reset
                         </Button>
                     </div>
-                    <Button onClick={handleGoogle} className="w-full rounded-2xl bg-pink-100 text-black
+                    <Button onClick={handleGoogleLogin} className="w-full rounded-2xl bg-pink-100 text-black
                              hover:bg-pink-500 hover:text-white border border-pink-400
                               transition-all duration-200" variant="">
                         <FcGoogle />
