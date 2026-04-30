@@ -35,7 +35,7 @@ const RegisterPage = () => {
       password: userData.password, // required
 
     })
-    console.log(data, error , "signup register")
+    // console.log(data, error , "signup register")
     if (!error) {
       router.push('/')
     }
@@ -149,8 +149,8 @@ const RegisterPage = () => {
             <Button
               type="submit"
               className="w-full rounded-2xl bg-indigo-100 text-black
-                             hover:bg-indigo-700 hover:text-white border border-blue-400
-                              transition-all duration-200">
+                   hover:bg-indigo-700 hover:text-white border border-blue-400
+                    transition-all duration-200">
               <Check />
               Register
             </Button>

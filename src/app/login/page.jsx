@@ -32,7 +32,7 @@ const LoginPage = () => {
             remember: true,
             callbackURL: "/",
         })
-        // console.log(data, error , "signup register")
+        // console.log(data, error , "login register")
 
         if (error) {
             alert(error.message)
