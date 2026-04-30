@@ -17,7 +17,7 @@ const Banner = () => {
           <div className="flex gap-4 items-center justify-center">
             <Link href="#">
               <Button className=" bg-blue-100 text-black border border-blue-400 hover:bg-blue-500 hover:text-white rounded-xl transform">
-                Get started
+               Explore Courses
               </Button>
             </Link>
           </div>

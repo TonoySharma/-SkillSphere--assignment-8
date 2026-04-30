@@ -4,7 +4,6 @@ import { Checkbox, Form, InputGroup } from "@heroui/react";
 import { Check, Eye, EyeSlash } from "@gravity-ui/icons";
 import {
   Button,
-  Description,
   FieldError,
   Input,
   Label,

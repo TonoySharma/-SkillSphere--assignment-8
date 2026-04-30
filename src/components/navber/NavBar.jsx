@@ -1,10 +1,10 @@
 "use client"
+
 import Image from "next/image";
 import Link from "next/link";
 import { authClient } from "../../lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
 import { PiSignOutFill } from "react-icons/pi";
-import { VscSignIn } from "react-icons/vsc";
 import NavLink from "../NavLink";
 
 const NavBar = () => {
@@ -28,7 +28,7 @@ const NavBar = () => {
             loading="eager"
             width={50}
             height={50}
-            className="object-cover h-auto w-auto"
+            className="object-cover h-auto w-auto rounded-full"
           />
           <h3 className="text-2xl font-bold bg-gradient-to-r via-purple-500 to-sky-500 bg-clip-text text-transparent">
             <Link href={"/"}>
@@ -55,7 +55,7 @@ const NavBar = () => {
               <Link className="border py-1 px-3 rounded-4xl mr-3 
                border-purple-400 bg-purple-100 hover:bg-purple-500
                 hover:text-white transform duration-200"  href={"/signup"}> 
-                SignUp</Link>
+                 Register</Link>
                 
             </li>
             <li>
@@ -75,7 +75,7 @@ const NavBar = () => {
              <Button size="sm" className='py-1 px-3 rounded-4xl mr-3 text-black border 
                border-purple-400 bg-purple-100 hover:bg-purple-500
                 hover:text-white transform duration-200' onClick={handleSignOut}>
-              SignOut
+              Log out
               <PiSignOutFill />
             </Button>
             </div>
