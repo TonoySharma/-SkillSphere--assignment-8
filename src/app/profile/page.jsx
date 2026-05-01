@@ -3,13 +3,14 @@ import React from 'react';
 import { authClient } from '../../lib/auth-client';
 import { Avatar, Card } from '@heroui/react';
 import { UpdateModal } from '@/components/updateprofile/UpdateProfile';
-import { IoLocationSharp } from 'react-icons/io5';
 
 const ProfilePage = () => {
     const userData = authClient.useSession();
     // console.log(usrData,  'usrData')
     const user = userData.data?.user
     //   console.log(user, 'user')
+
+    
     return (
         <div className='px-3 sm:px-4 md:px-0'>
             

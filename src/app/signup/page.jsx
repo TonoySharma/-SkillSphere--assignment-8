@@ -152,7 +152,8 @@ const RegisterPage = () => {
           {/* Buttons */}
           <div className="flex flex-col gap-3 mt-2">
 
-            <Button
+         <Link href={"/login"}>
+              <Button
               type="submit"
               className="w-full rounded  bg-gray-100 text-black
                              hover:bg-gray-700 hover:text-white border border-gray-300
@@ -160,10 +161,11 @@ const RegisterPage = () => {
               <Check />
               Register
             </Button>
+         </Link>
 
             <Button onClick={handleGoogleLogin} className="w-full rounded  bg-gray-50 text-black
-                                  hover:bg-gray-700 hover:text-white border border-gray-300
-                                   transition-all duration-200" variant="">
+                 hover:bg-gray-700 hover:text-white border border-gray-300
+                   transition-all duration-200" variant="">
               <FcGoogle />
               Sign in with Google
             </Button>

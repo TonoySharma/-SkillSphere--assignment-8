@@ -37,7 +37,7 @@ const instructors = [
 
 export default function TopCards() {
   return (
-    <div className="mt-16 px-5 bg-pink-50 h-[540px]">
+    <div className="mt-16 bg-pink-50 px-3 sm:px-4 md:px-0 h-[540px] ">
       <h1 className="text-3xl md:text-4xl font-bold text-center p-15">
         ✨Top Instructors
       </h1>
