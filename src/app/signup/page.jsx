@@ -13,7 +13,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { MdOutlineLockReset } from "react-icons/md";
-import { signUp } from "@/lib/auth-client";
+import { authClient, signUp } from "@/lib/auth-client";
+import { FcGoogle } from "react-icons/fc";
 
 
 
@@ -46,12 +47,18 @@ const RegisterPage = () => {
       alert("signup successful");
     }
   };
-
+  const handleGoogleLogin = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
+  }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
+    <div className="my-15 flex justify-center px-4">
 
-      <div className="w-full  backdrop-blur-xl bg-white/70 border border-gray-200 shadow rounded-2xl p-8 max-w-[400px]  bg-gradient-to-br from-indigo-100 via-white to-emerald-100 ">
+      <div className="w-full  backdrop-blur-xl bg-white/70 border
+       border-gray-200 shadow rounded-2xl p-8 max-w-[450px] bg-gradient-to-br
+           from-indigo-50 via-white to-emerald-50 ">
 
         <h1 className="text-2xl font-bold text-center mb-5 ">
           Register your account
@@ -69,7 +76,7 @@ const RegisterPage = () => {
               return null;
             }}>
             <Label>Name</Label>
-            <Input placeholder="Enter Your Name" />
+            <Input className="rounded border border-gray-300" placeholder="Enter Your Name " />
             <FieldError />
           </TextField>
 
@@ -84,7 +91,7 @@ const RegisterPage = () => {
               return null;
             }}>
             <Label>Photo URL</Label>
-            <Input placeholder="Enter url" />
+            <Input className="rounded border border-gray-300" placeholder="Enter url" />
             <FieldError />
           </TextField>
 
@@ -105,7 +112,7 @@ const RegisterPage = () => {
             <Label>Email</Label>
             <Input
               placeholder="Enter your email"
-              className="rounded-xl"
+              className="rounded border border-gray-300"
             />
             <FieldError />
           </TextField>
@@ -113,9 +120,9 @@ const RegisterPage = () => {
           {/* Password */}
           <TextField className="w-full" name="password">
             <Label>Password</Label>
-            <InputGroup className='rounded-2xl overflow-hidden'>
+            <InputGroup className='rounded border border-gray-300 overflow-hidden '>
               <InputGroup.Input
-                className="w-full max-w-[280px]"
+                className="w-full max-w-[350px]"
                 type={isVisible ? "text" : "password"}
                 name="password"
                 placeholder="Your Password"
@@ -147,21 +154,18 @@ const RegisterPage = () => {
 
             <Button
               type="submit"
-              className="w-full rounded-2xl bg-indigo-100 text-black
-                   hover:bg-indigo-700 hover:text-white border border-blue-400
+              className="w-full rounded  bg-gray-100 text-black
+                             hover:bg-gray-700 hover:text-white border border-gray-300
                     transition-all duration-200">
               <Check />
               Register
             </Button>
 
-            <Button
-              type="reset"
-              variant="bordered"
-              className="w-full rounded-2xl bg-indigo-100 text-black
-              hover:bg-indigo-700 hover:text-white border border-blue-400
-              transition-all duration-200">
-               <MdOutlineLockReset/>
-              Reset
+            <Button onClick={handleGoogleLogin} className="w-full rounded  bg-gray-50 text-black
+                                  hover:bg-gray-700 hover:text-white border border-gray-300
+                                   transition-all duration-200" variant="">
+              <FcGoogle />
+              Sign in with Google
             </Button>
           </div>
         </Form>

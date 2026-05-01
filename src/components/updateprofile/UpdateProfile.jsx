@@ -10,6 +10,7 @@ export function UpdateModal() {
     const name = e.target.name.value;
     const image = e.target.image.value;
 
+
     // console.log({ image, name })
     await authClient.updateUser({
       image,
@@ -37,17 +38,17 @@ export function UpdateModal() {
                 <form onSubmit={onsubmit} className="flex flex-col gap-4">
                   <TextField className="w-full" name="name" type="text">
                     <Label>Name</Label>
-                    <Input placeholder="Enter your name" />
+                    <Input placeholder="Enter your name" className='rounded border border-gray-300' />
                   </TextField>
                   <TextField className="w-full" name="image" type="url">
                     <Label>Image URL</Label>
-                    <Input placeholder="Image URL" />
+                    <Input placeholder="Image URL" className='rounded border border-gray-300' />
                   </TextField>
                   <Modal.Footer>
-                    <Button slot="close" variant="secondary">
+                    <Button slot="close" variant="secondary" className='rounded border border-gray-300'>
                       Cancel
                     </Button>
-                    <Button type="submit" slot="close">Save</Button>
+                    <Button type="submit" slot="close" className='rounded border border-gray-300 bg-blue-100 text-black hover:bg-blue-500 hover:text-white'>Save</Button>
                   </Modal.Footer>
                 </form>
 

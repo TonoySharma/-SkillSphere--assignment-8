@@ -4,6 +4,7 @@ import Extra from "@/components/extrasections/Extra";
 import TopCards from "@/components/instructors/TopCards";
 import TopRattingCard from "@/components/topcard/TopRattingCard";
 
+
 export default function Home() {
   return (
    <div>
@@ -12,7 +13,7 @@ export default function Home() {
      <Extra></Extra>
      <TipsSection></TipsSection>
      <TopCards></TopCards>
-     
+
    </div>
   );
 }

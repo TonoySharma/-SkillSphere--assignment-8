@@ -34,6 +34,8 @@ export default function TipsSection() {
                 <li>✔️ Pomodoro - 25min focus + 5min break</li>
                 <li>✔️ Spaced Repetition - revise smartly</li>
                 <li>✔️ Smart Note Taking</li>
+                    <li>✔️ Practice active recall & revision</li>
+                <li>✔️ Stay consistent every day</li>
               </ul>
             </Accordion.Body>
           </Accordion.Panel>
@@ -56,6 +58,9 @@ export default function TipsSection() {
                 <li>✔️ Prioritize tasks</li>
                 <li>✔️ Avoid multitasking</li>
                 <li>✔️ Use time blocking</li>
+                <li>✔️ Use Pomodoro (25 min focus)</li>
+                <li>✔️Avoid distractions (social media 🚫)</li>
+            
               </ul>
             </Accordion.Body>
           </Accordion.Panel>

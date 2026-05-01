@@ -4,7 +4,6 @@ import { Checkbox, Form, InputGroup } from "@heroui/react";
 import { Check, Eye, EyeSlash } from "@gravity-ui/icons";
 import {
     Button,
-    Description,
     FieldError,
     Input,
     Label,
@@ -15,6 +14,7 @@ import { authClient, signIn, signUp } from "../../lib/auth-client";
 import { FcGoogle } from "react-icons/fc";
 import { CiLogin } from "react-icons/ci";
 import { MdOutlineLockReset } from "react-icons/md";
+import Link from "next/link";
 
 
 const LoginPage = () => {
@@ -48,15 +48,18 @@ const LoginPage = () => {
     }
 
     return (
-        <div className="min-h-screen flex items-center justify-center px-4">
+        <div className="flex my-15  justify-center px-4">
 
             <div className="w-full  backdrop-blur-xl bg-white/70 border
-             border-gray-200 shadow rounded-2xl p-8 max-w-[400px] 
-              bg-gradient-to-br from-indigo-100 via-white to-emerald-100 ">
+             border-gray-200 shadow rounded-2xl p-8 max-w-[450px] bg-gradient-to-br
+              from-indigo-50 via-white to-emerald-50 ">
 
-                <h1 className="text-2xl font-bold text-center mb-5 ">
-                    Login your account
-                </h1>
+                <div className=" mb-6">
+                    <h1 className="text-2xl font-bold text-center mb-2">
+                        Login your account
+                    </h1>
+                    <p className="text-center text-gray-500">Welcome back! Please enter your details.</p>
+                </div>
 
                 <Form className="flex flex-col gap-5" onSubmit={onSubmit}>
 
@@ -78,7 +81,7 @@ const LoginPage = () => {
                         <Label>Email</Label>
                         <Input
                             placeholder="Enter your email"
-                            className="rounded-xl"
+                            className="rounded border border-gray-300"
                         />
                         <FieldError />
                     </TextField>
@@ -86,9 +89,9 @@ const LoginPage = () => {
                     {/* Password */}
                     <TextField className="w-full" name="password">
                         <Label>Password</Label>
-                        <InputGroup className='rounded-2xl overflow-hidden'>
+                        <InputGroup className='rounded overflow-hidden border border-gray-300'>
                             <InputGroup.Input
-                                className="w-full max-w-[280px]"
+                                className="w-full max-w-[350px]"
                                 type={isVisible ? "text" : "password"}
                                 name="password"
                                 placeholder="Your Password"
@@ -120,8 +123,8 @@ const LoginPage = () => {
 
                         <Button
                             type="submit"
-                            className="w-full rounded-2xl bg-indigo-100 text-black
-                             hover:bg-indigo-700 hover:text-white border border-blue-400
+                            className="w-full rounded bg-gray-50 text-black
+                             hover:bg-gray-700 hover:text-white border border-gray-300
                               transition-all duration-200">
                             <CiLogin />
                             Login
@@ -130,20 +133,31 @@ const LoginPage = () => {
                         <Button
                             type="reset"
                             variant="bordered"
-                            className="w-full rounded-2xl bg-indigo-100 text-black
-                             hover:bg-indigo-700 hover:text-white border border-blue-400
+                            className="w-full rounded  bg-gray-50 text-black
+                             hover:bg-gray-700 hover:text-white border border-gray-300
                               transition-all duration-200">
                             <MdOutlineLockReset />
                             Reset
                         </Button>
                     </div>
-                    <Button onClick={handleGoogleLogin} className="w-full rounded-2xl bg-pink-100 text-black
-                             hover:bg-pink-500 hover:text-white border border-pink-400
+                    <hr />
+                    <Button onClick={handleGoogleLogin} className="w-full rounded  bg-gray-50 text-black
+                             hover:bg-gray-700 hover:text-white border border-gray-300
                               transition-all duration-200" variant="">
                         <FcGoogle />
                         Sign in with Google
                     </Button>
                 </Form>
+
+                <p className="text-xs text-gray-500 text-center mt-6">
+                   Dont have an account? {" "}
+                    <Link href="/signup">
+                        <span className="text-indigo-600 cursor-pointer hover:underline">
+                            Sign Up
+                        </span>
+                    </Link>
+                </p>
+
 
             </div>
         </div>

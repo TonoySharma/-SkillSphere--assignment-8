@@ -4,6 +4,7 @@ import { Zoom } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import Link from "next/link";
 import { Button } from "@heroui/react";
+import { FaChevronRight } from "react-icons/fa";
 
 const images = [
   "https://images.pexels.com/photos/7283630/pexels-photo-7283630.jpeg",
@@ -16,7 +17,7 @@ const images = [
 
 const Banner = () => {
   return (
-    <div className=" overflow-hidden rounded mt-5 px-3 sm:px-4 md:px-0 max-w-7xl mx-auto ">
+    <div className=" overflow-hidden px-3 sm:px-4 md:px-0 max-w-7xl mx-auto ">
       <Zoom scale={1.4} indicators={true}>
         {images.map((img, index) => (
           <div key={index} className="relative w-full h-full md:h-[550px] ">
@@ -25,7 +26,7 @@ const Banner = () => {
             <img
               src={img}
               alt="Slide"
-              className="w-full h-full object-cover rounded-2xl "
+              className="w-full h-full object-cover  "
             />
 
             {/* Dark overlay */}
@@ -38,18 +39,31 @@ const Banner = () => {
               </h1>
 
               <p className="text-sm md:text-lg mb-6 max-w-2xl">
-               Learn from Industry Experts
+                Learn from Industry Experts
               </p>
 
-              <Link
-                href="/courses"
-                className="px-3 py-1 rounded-full text-white font-medium 
-                  bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 
-                  hover:from-red-500 hover:to-purple-600 
-                  transition duration-300 shadow-lg">
-                <Button variant=""> Start Learning</Button>
+              <div className="flex items-center gap-4">
+                <Link
+                  href="/courses"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded text-white font-medium 
+    bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 
+    hover:from-red-500 hover:to-purple-600 
+    transition duration-300 shadow-lg"
+                >
+                  Start Learning <FaChevronRight />
+                </Link>
 
-              </Link>
+          
+                <Link
+                  href="/about"
+                  className="inline-flex items-center px-5 py-3 rounded font-medium 
+    border border-gray-400 text-gray-500 
+    hover:bg-gray-100 transition duration-300"
+                >
+                  Learn More
+                </Link>
+
+              </div>
             </div>
           </div>
         ))}

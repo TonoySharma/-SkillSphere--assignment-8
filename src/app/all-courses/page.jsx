@@ -24,7 +24,7 @@ const AllCoursesPage = () => {
 
     return (
         <div>
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between max-w-7xl mx-auto gap-4 px-4 ">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between max-w-7xl mx-auto gap-4 px-4 mt-10">
 
                 <h1 className="my-3 sm:my-5 text-2xl sm:text-3xl font-bold">
                     🔥 Popular Courses
@@ -43,7 +43,7 @@ const AllCoursesPage = () => {
 
             </div>
 
-            <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 px-3 sm:px-4 md:px-0 mb-8'>
+            <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 px-3 sm:px-4 md:px-0 mt-6 mb-15'>
                 {
                     filteredPhotos.map(photo => (
                         <PhotoCard key={photo.id} photo={photo} />

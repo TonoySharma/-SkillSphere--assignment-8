@@ -1,77 +1,75 @@
 "use client";
 
 import Image from "next/image";
-import { FaStar } from "react-icons/fa";
 
 const instructors = [
   {
     id: 1,
     name: "John Doe",
-    title: "Senior Web Developer",
-    image: "https://media.baselineresearch.com/images/789608/789608_full.jpg",
-    rating: 4.9,
+      title: "Senior Web Developer",
+    image: "https://decisionsystemsgroup.github.io/workshop-html/img/john-doe.jpg",
+     rating: 4.9,
   },
   {
     id: 2,
     name: "Sarah Smith",
-    title: "UI/UX Designer",
-    image: "https://www.scotsman.com/webimg/legacy_elm_42710311.jpg?crop=3:2,smart&trim=&width=640&quality=65&enable=upscale",
-    rating: 4.8,
+      title: "UI/UX Designer",
+    image:
+      "https://www.scotsman.com/webimg/legacy_elm_42710311.jpg?crop=3:2,smart&trim=&width=640&quality=65&enable=upscale",
+    rating: 4.8, 
   },
   {
     id: 3,
     name: "Michael Lee",
-    title: "Data Scientist",
-    image: "https://i.ibb.co/ZYW3VTp/teacher3.jpg",
-    rating: 4.7,
+     title: "Data Scientist",
+    image: "https://event.foundryco.com/wp-content/uploads/sites/10/2025/07/Michael-Lee-scaled-670x670.jpg",
+     rating: 4.7,
   },
   {
     id: 4,
     name: "Emma Watson",
     title: "AI Instructor",
-    image: "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/09/1200/675/emma-watson-white-lace.jpg?ve=1&tl=1",
-    rating: 4.9,
+    image:
+      "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/09/1200/675/emma-watson-white-lace.jpg?ve=1&tl=1",
+     rating: 4.9,  
   },
 ];
 
 export default function TopCards() {
   return (
-    <div className="mt-16 px-5 bg-pink-50 h-[450px]">
-      {/* Title */}
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-10 p-5">
+    <div className="mt-16 px-5 bg-pink-50 h-[540px]">
+      <h1 className="text-3xl md:text-4xl font-bold text-center p-15">
         ✨Top Instructors
       </h1>
 
-      <div className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-6 ">
-
-        {instructors.map((ins) => (
+      <div className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-6 mb-15">
+        {instructors.map((p) => (
           <div
-            key={ins.id}
-            className="bg-gray-100 rounded-2xl shadow-md overflow-hidden group hover:shadow-xl transition duration-300"
-          >
+            key={p.id}
+            className="relative h-70 rounded-xl overflow-hidden group ">
             {/* Image */}
-            <div className="relative h-48 overflow-hidden">
-              <Image
-                src={ins.image}
-                alt={ins.name}
-                fill
-                className="object-cover group-hover:scale-110 transition duration-300"
-              />
-            </div>
-
-            {/* Content */}
-            <div className="p-4 text-center">
-              <h2 className="text-lg font-semibold">{ins.name}</h2>
-              <p className="text-sm text-gray-500">{ins.title}</p>
-
-              <div className="flex items-center justify-center gap-1 mt-2 text-yellow-500">
-                <FaStar />
-                <span className="text-sm text-gray-600">{ins.rating}</span>
-              </div>
+            <Image
+              src={p.image}
+              alt={p.name}
+              fill
+              className="object-cover group-hover:scale-105 transition duration-300"/>
+            <div
+              className="absolute inset-0 bg-black/20 
+              translate-y-full group-hover:translate-y-0 
+              transition-transform duration-500 ease-in-out 
+              flex items-end justify-center pb-6">
+              <p
+                className="text-white text-sm font-semibold
+                opacity-0 translate-y-5
+                group-hover:opacity-100 group-hover:translate-y-0
+                transition-all duration-500 delay-150">
+                {p.name}<br></br>
+                {p.title}
+              </p>
+              
             </div>
           </div>
         ))}
-
       </div>
     </div>
   );

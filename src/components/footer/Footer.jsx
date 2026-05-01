@@ -17,18 +17,6 @@ const Footer = () => {
             Learn modern web development, improve your skills, and build real-world projects with expert guidance.
           </p>
         </div>
-
-        {/* Quick Links */}
-        {/* <div className="text-center sm:text-left">
-          <h3 className="text-white font-semibold mb-3">Quick Links</h3>
-          <ul className="space-y-2 text-sm">
-            <li><Link href="/" className="hover:text-purple-500 transition">Home</Link></li>
-            <li><Link href="/courses" className="hover:text-purple-500 transition">Courses</Link></li>
-            <li><Link href="/about" className="hover:text-purple-500 transition">About</Link></li>
-            <li><Link href="/blog" className="hover:text-purple-500 transition">Blog</Link></li>
-          </ul>
-        </div> */}
-
         {/* Contact Info */}
         <div className="text-center sm:text-left">
           <h3 className="text-white font-semibold mb-3">Contact Us</h3>
@@ -59,7 +47,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
+      {/* Bottom */}
       <div className="border-t border-gray-700 py-5 text-center text-sm text-gray-500 px-4">
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4">

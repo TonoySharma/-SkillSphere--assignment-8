@@ -7,6 +7,7 @@ import { Avatar, Button } from "@heroui/react";
 import { PiSignOutFill } from "react-icons/pi";
 import NavLink from "../NavLink";
 import { useState } from "react";
+import { FaChevronRight } from "react-icons/fa";
 
 const NavBar = () => {
   const userData = authClient.useSession();
@@ -53,13 +54,13 @@ const NavBar = () => {
           {!user && (
             <ul className="flex items-center text-sm">
               <li>
-                <Link className="border py-1 px-3 rounded-4xl mr-3 border-purple-400 bg-purple-100 hover:bg-purple-500 hover:text-white transition" href={"/signup"}>
-                  Register
+                <Link className="border font-medium py-3 px-5 mr-3  rounded border-gray-300 bg-gray-100 hover:bg-gray-500 hover:text-white transition" href={"/signup"}>
+                 Sing Up
                 </Link>
               </li>
               <li>
-                <Link className="border py-1 px-3 rounded-4xl border-purple-400 bg-purple-100 hover:bg-purple-500 hover:text-white transition" href={"/login"}>
-                  LogIn
+                <Link className="border font-medium py-3 px-4 rounded border-purple-400 text-white bg-purple-500  transition flex items-center gap-3" href={"/login"}>
+                 Get Started<FaChevronRight />
                 </Link>
               </li>
             </ul>
@@ -78,10 +79,10 @@ const NavBar = () => {
 
               <Button
                 size="sm"
-                className="py-1 px-3 rounded-4xl text-black border border-purple-400 bg-purple-100 hover:bg-purple-500 hover:text-white transition"
+                className="py-5 px-4 rounded text-black border border-purple-300 bg-purple-100 hover:bg-purple-500 hover:text-white transition"
                 onClick={handleSignOut}
               >
-                Log out <PiSignOutFill />
+                Log Out <PiSignOutFill />
               </Button>
             </div>
           )}
@@ -90,13 +91,12 @@ const NavBar = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-2xl"
+          className="md:hidden text-2xl cursor-pointer"
         >
           ☰
         </button>
       </nav>
 
-      {/* Mobile Menu */}
       {open && (
         <div className="md:hidden px-4 pb-4 space-y-3">
 
@@ -108,11 +108,11 @@ const NavBar = () => {
 
           {!user && (
             <div className="flex gap-3 mt-3">
-              <Link className="border py-1 px-3 rounded-4xl border-purple-400 bg-purple-100" href={"/signup"}>
-                Register
+              <Link className="border font-medium py-1 px-3 rounded border-purple-400 bg-purple-100" href={"/signup"}>
+               Sign Up
               </Link>
-              <Link className="border py-1 px-3 rounded-4xl border-purple-400 bg-purple-100" href={"/login"}>
-                Login
+              <Link className="border font-medium py-1 px-3 rounded border-purple-400 flex items-center gap-3 bg-purple-500 text-white  " href={"/login"}>
+                Get Started<FaChevronRight />
               </Link>
             </div>
           )}
@@ -127,8 +127,13 @@ const NavBar = () => {
                 <span className="text-sm">{user?.name}</span>
               </div>
 
-              <Button size="sm" onClick={handleSignOut}>
-                Logout <PiSignOutFill />
+              
+              <Button
+                size="sm"
+                className="py-5 px-4 rounded text-black border border-purple-300 bg-purple-100 hover:bg-purple-500 hover:text-white transition"
+                onClick={handleSignOut}
+              >
+                Log Out <PiSignOutFill />
               </Button>
             </div>
           )}
