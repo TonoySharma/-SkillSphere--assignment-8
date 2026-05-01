@@ -1,3 +1,4 @@
+
 import { Button, Card } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -18,6 +19,7 @@ const DetailsCardPage = async ({params}) => {
     return (
       <div className=" mt-5 flex justify-center px-3 sm:px-4 md:px-0 mb-5">
       <Card className="p-5 border bg-gray-100 rounded-xl shadow-md w-[650px]
+
        hover:shadow-lg transition-all duration-300 ">
         {/* Image */}
         <div className="relative w-full h-[300px] mb-4">
@@ -43,7 +45,7 @@ const DetailsCardPage = async ({params}) => {
           <p><span className="font-semibold">Category:</span> {photo.category}</p>
           <p className=' flex items-center gap-1'><span className="font-semibold">Rating:</span>  <FcRating />{photo.rating}</p>
         </div>
-
+       
       </Card>
     </div>
     );

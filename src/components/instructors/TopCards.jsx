@@ -36,19 +36,18 @@ const instructors = [
 
 export default function TopCards() {
   return (
-    <div className="py-16 px-5 bg-gray-50">
+    <div className="mt-16 px-5 bg-pink-50 h-[450px]">
       {/* Title */}
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-12">
-         Top Instructors
+      <h1 className="text-3xl md:text-4xl font-bold text-center mb-10 p-5">
+        ✨Top Instructors
       </h1>
 
-      {/* Grid */}
-      <div className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-4 gap-6 ">
 
         {instructors.map((ins) => (
           <div
             key={ins.id}
-            className="bg-white rounded-2xl shadow-md overflow-hidden group hover:shadow-xl transition duration-300"
+            className="bg-gray-100 rounded-2xl shadow-md overflow-hidden group hover:shadow-xl transition duration-300"
           >
             {/* Image */}
             <div className="relative h-48 overflow-hidden">
@@ -65,7 +64,6 @@ export default function TopCards() {
               <h2 className="text-lg font-semibold">{ins.name}</h2>
               <p className="text-sm text-gray-500">{ins.title}</p>
 
-              {/* Rating */}
               <div className="flex items-center justify-center gap-1 mt-2 text-yellow-500">
                 <FaStar />
                 <span className="text-sm text-gray-600">{ins.rating}</span>

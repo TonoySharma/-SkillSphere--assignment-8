@@ -27,7 +27,7 @@ const stats = [
 
 const Extra = () => {
   return (
-    <div className="bg-[#0b1c3d] py-10 px-5 mt-8">
+    <div className="bg-[#0b1c3d] py-10 px-5 mt-16">
       <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
         {stats.map((item) => (
           <div

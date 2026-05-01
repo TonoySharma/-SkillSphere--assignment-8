@@ -1,5 +1,5 @@
 import Banner from "@/components/banner/Banner";
-import TipsSection from "@/components/bottomsection/TipsSection";
+import TipsSection from "@/components/faqsection/TipsSection";
 import Extra from "@/components/extrasections/Extra";
 import TopCards from "@/components/instructors/TopCards";
 import TopRattingCard from "@/components/topcard/TopRattingCard";

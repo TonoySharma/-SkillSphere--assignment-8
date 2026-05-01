@@ -24,13 +24,13 @@ const AllCoursesPage = () => {
 
     return (
         <div>
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between max-w-7xl mx-auto gap-4 px-4">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between max-w-7xl mx-auto gap-4 px-4 ">
 
                 <h1 className="my-3 sm:my-5 text-2xl sm:text-3xl font-bold">
                     🔥 Popular Courses
                 </h1>
 
-                <SearchField className="border rounded-2xl overflow-hidden w-full sm:w-auto sm:mb-4">
+                <SearchField className="border rounded-2xl overflow-hidden w-full sm:w-auto mb-3 flex">
                     <SearchField.Group>
                         <SearchField.SearchIcon />
                         <SearchField.Input
@@ -43,7 +43,7 @@ const AllCoursesPage = () => {
 
             </div>
 
-            <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 px-3 sm:px-4 md:px-0'>
+            <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 px-3 sm:px-4 md:px-0 mb-8'>
                 {
                     filteredPhotos.map(photo => (
                         <PhotoCard key={photo.id} photo={photo} />

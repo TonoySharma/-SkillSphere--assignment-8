@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Button } from "@heroui/react";
 
 const images = [
-  "https://i.ibb.co/CptJWkkJ/wes-hicks-4-Ee-Tna-C1-S4-unsplash.jpg",
+  "https://images.pexels.com/photos/7283630/pexels-photo-7283630.jpeg",
   "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://images.unsplash.com/photo-1758873272808-5580ed7deb44?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   "https://i.ibb.co/1YGJ2Zh5/jakub-zerdzicki-Lq1-Dhx-Ameok-unsplash.jpg",
@@ -16,16 +16,16 @@ const images = [
 
 const Banner = () => {
   return (
-    <div className="w-full h-[600px] md:h-[550px] overflow-hidden rounded mt-5 px-3 sm:px-4 md:px-0">
+    <div className=" overflow-hidden rounded mt-5 px-3 sm:px-4 md:px-0 max-w-7xl mx-auto ">
       <Zoom scale={1.4} indicators={true}>
         {images.map((img, index) => (
-          <div key={index} className="relative w-full h-full md:h-[550px]">
+          <div key={index} className="relative w-full h-full md:h-[550px] ">
 
             {/* Image */}
             <img
               src={img}
               alt="Slide"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-2xl "
             />
 
             {/* Dark overlay */}

@@ -2,6 +2,7 @@
 import React from 'react';
 import { authClient } from '../../lib/auth-client';
 import { Avatar, Card } from '@heroui/react';
+import { UpdateModal } from '@/components/updateprofile/UpdateProfile';
 
 const ProfilePage = () => {
     const userData = authClient.useSession();
@@ -10,9 +11,11 @@ const ProfilePage = () => {
     //   console.log(user, 'user')
     return (
         <div className='px-3 sm:px-4 md:px-0'>
-            <Card className="max-w-md mx-auto rounded-xl border my-5
-             p-6 flex justify-center items-center mb-50 ">
-
+            
+            <Card className="max-w-md mx-auto rounded-xl border my-5  p-6 flex justify-center items-center mb-50 ">
+                 <div className='absolute top-3 right-4'>
+                    <UpdateModal></UpdateModal>
+                 </div>
                 <Avatar className="h-30 w-30 ring-4 ring-purple-200">
                     <Avatar.Image
                         alt={user?.name || "User"}
@@ -29,7 +32,7 @@ const ProfilePage = () => {
                 <p className="text-gray-500 text-sm text-center font-medium">
                     {user?.bio || "No bio added yet."}
                 </p>
-
+                
             </Card>
         </div>
     );

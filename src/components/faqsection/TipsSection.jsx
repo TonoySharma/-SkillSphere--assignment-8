@@ -1,36 +1,35 @@
 "use client";
 
 import { Accordion } from "@heroui/react";
-import { FaBookOpen, FaClock, FaBolt } from "react-icons/fa";
+import { FaBookOpen, FaClock } from "react-icons/fa";
 
-export default function LearningTipsAccordion() {
+export default function TipsSection() {
   return (
-    <div className="py-16 px-5 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#020617] text-white">
+    <div className="mt-15 px-5 ">
       
       {/* Title */}
-      <h1 className="text-4xl font-bold text-center mb-12 tracking-wide">
-        📘 Learning Tips for Success
+      <h1 className="text-4xl font-bold text-center mb-12 tracking-wide ">
+        📘Learning Tips for Success
       </h1>
 
       {/* Accordion */}
       <Accordion
         allowsMultipleExpanded
-        className="w-full max-w-4xl mx-auto backdrop-blur-lg bg-white/10 border border-white/20 rounded-2xl p-4 shadow-xl"
-      >
+        className="w-full max-w-4xl mx-auto backdrop-blur-lg border border-white/20 rounded-2xl p-4 bg-gray-100 ">
 
         {/* Study Techniques */}
         <Accordion.Item>
           <Accordion.Heading>
-            <Accordion.Trigger className="flex items-center gap-3 text-lg font-semibold hover:text-blue-400 transition">
-              <FaBookOpen className="text-blue-400" />
+            <Accordion.Trigger className="flex items-center gap-3 text-2xl font-semibold transition rounded-xl">
+              <FaBookOpen className="text-blue-400 " />
               Study Techniques
-              <Accordion.Indicator />
+              <Accordion.Indicator  className=""/>
             </Accordion.Trigger>
           </Accordion.Heading>
 
           <Accordion.Panel>
             <Accordion.Body>
-              <ul className="space-y-2 text-gray-200">
+              <ul className="space-y-2 text-gray-600 text-lg">
                 <li>✔️ Active Recall - test yourself</li>
                 <li>✔️ Pomodoro - 25min focus + 5min break</li>
                 <li>✔️ Spaced Repetition - revise smartly</li>
@@ -43,7 +42,7 @@ export default function LearningTipsAccordion() {
         {/* Time Management */}
         <Accordion.Item>
           <Accordion.Heading>
-            <Accordion.Trigger className="flex items-center gap-3 text-lg font-semibold hover:text-green-400 transition">
+            <Accordion.Trigger className="flex items-center gap-3 font-semibold  transition rounded-xl text-2xl">
               <FaClock className="text-green-400" />
               Time Management
               <Accordion.Indicator />
@@ -52,7 +51,7 @@ export default function LearningTipsAccordion() {
 
           <Accordion.Panel>
             <Accordion.Body>
-              <ul className="space-y-2 text-gray-200">
+              <ul className="space-y-2 text-lg text-gray-600">
                 <li>✔️ Plan your day</li>
                 <li>✔️ Prioritize tasks</li>
                 <li>✔️ Avoid multitasking</li>
