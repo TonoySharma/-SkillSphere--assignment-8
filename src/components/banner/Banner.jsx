@@ -3,7 +3,6 @@
 import { Zoom } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import Link from "next/link";
-import { Button } from "@heroui/react";
 import { FaChevronRight } from "react-icons/fa";
 
 const images = [

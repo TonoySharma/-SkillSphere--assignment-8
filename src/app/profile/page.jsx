@@ -18,7 +18,7 @@ const ProfilePage = () => {
                     <div className='absolute top-4 right-4'>
                         <UpdateModal></UpdateModal>
                     </div>
-                <Avatar className="h-30 w-30 ring-4 ring-purple-200">
+                <Avatar className="h-30 w-30 ring-4 ring-purple-100">
                     <Avatar.Image
                         alt={user?.name || "User"}
                         src={user?.image}

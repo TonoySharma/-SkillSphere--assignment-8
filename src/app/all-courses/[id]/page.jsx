@@ -1,4 +1,5 @@
 
+import CourseCurriculum from '@/components/curriculum/CourseCurriculum';
 import { Button, Card } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -17,10 +18,10 @@ const DetailsCardPage = async ({params}) => {
     //  console.log(photo );
     
     return (
-      <div className=" mt-5 flex justify-center px-3 sm:px-4 md:px-0 mb-5">
-      <Card className="p-5 border bg-gray-100 rounded-xl shadow-md w-[650px]
-
-       hover:shadow-lg transition-all duration-300 ">
+      <div className="  px-3 sm:px-4 md:px-0">
+    <div className='mt-5 flex items-center justify-center'>
+        <Card className="p-5 border bg-gray-100 rounded-xl shadow-md w-[650px]
+       hover:shadow-lg transition-all duration-300 my-25">
         {/* Image */}
         <div className="relative w-full h-[300px] mb-4">
           <Image
@@ -47,6 +48,11 @@ const DetailsCardPage = async ({params}) => {
         </div>
        
       </Card>
+
+    </div>
+      <div>
+        <CourseCurriculum></CourseCurriculum>
+      </div>
     </div>
     );
 };

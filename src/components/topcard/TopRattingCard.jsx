@@ -11,18 +11,12 @@ const TopRattingCard = async () => {
 
   return (
     <div className="mt-10 px-3 sm:px-4 md:px-0">
-      <h1 className="font-bold text-3xl my-5 text-center">⭐ Top Rated Courses</h1>
+      <h1 className="font-bold text-3xl my-5 text-center">
+        ⭐ Top Rated Courses</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto gap-6">
-        {topPhotos.map((photo, index) => (
+        {topPhotos.map((photo,) => (
           <div key={photo.id} className="relative">
-            
-            {/* Top badge */}
-            <span className="absolute top-2 left-2 bg-yellow-400
-             text-white text-xs px-2 py-1 rounded-full shadow">
-              {index + 1}
-            </span>
-
             <PhotoCard photo={photo} />
           </div>
         ))}

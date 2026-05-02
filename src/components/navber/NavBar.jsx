@@ -19,9 +19,11 @@ const NavBar = () => {
     await authClient.signOut();
   };
 
+
+
   return (
     <div className="border-b px-2 sticky top-0 z-40 bg-gray-100">
-      <nav className="flex justify-between items-center py-3 max-w-7xl mx-auto w-full">
+      <nav className="flex justify-between items-center py-5 max-w-7xl mx-auto w-full">
 
         {/* Logo */}
         <div className="flex gap-2 items-center">
@@ -31,8 +33,7 @@ const NavBar = () => {
             loading="eager"
             width={60}
             height={60}
-            className="object-cover h-auto w-auto rounded-full"
-          />
+            className="object-cover h-auto w-auto rounded-full" />
 
           <h3 className="text-2xl font-bold bg-gradient-to-r via-purple-500 to-sky-500 bg-clip-text text-transparent">
             <Link href={"/"}>
@@ -42,7 +43,7 @@ const NavBar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-5 text-sm font-medium">
+        <ul className="hidden md:flex items-center gap-6 font-medium">
           <li><NavLink href={"/"}>Home</NavLink></li>
           <li><NavLink href={"/all-courses"}>All Courses</NavLink></li>
           <li><NavLink href={"/profile"}>My Profile</NavLink></li>
@@ -88,11 +89,10 @@ const NavBar = () => {
           )}
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Button */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden text-2xl cursor-pointer"
-        >
+          className="md:hidden text-2xl cursor-pointer">
           ☰
         </button>
       </nav>
@@ -131,8 +131,7 @@ const NavBar = () => {
               <Button
                 size="sm"
                 className="py-5 px-4 rounded text-black border border-purple-300 bg-purple-100 hover:bg-purple-500 hover:text-white transition"
-                onClick={handleSignOut}
-              >
+                onClick={handleSignOut}>
                 Log Out <PiSignOutFill />
               </Button>
             </div>

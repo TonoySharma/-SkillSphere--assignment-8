@@ -30,8 +30,8 @@ const AllCoursesPage = () => {
                     🔥 Popular Courses
                 </h1>
 
-                <SearchField className="border rounded-2xl overflow-hidden w-full sm:w-auto mb-3 flex">
-                    <SearchField.Group>
+                <SearchField className="border  w-full sm:w-auto mb-3 flex">
+                    <SearchField.Group className="border rounded-sm px-2 focus-within:ring-0 focus-within:shadow-none">
                         <SearchField.SearchIcon />
                         <SearchField.Input
                             value={search}

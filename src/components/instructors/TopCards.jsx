@@ -37,7 +37,7 @@ const instructors = [
 
 export default function TopCards() {
   return (
-    <div className="mt-16 bg-pink-50 px-3 sm:px-4 md:px-0 h-[540px] ">
+    <div className="mt-16 bg-pink-50 px-3 sm:px-4 md:px-0 p-10 ">
       <h1 className="text-3xl md:text-4xl font-bold text-center p-15">
         ✨Top Instructors
       </h1>
@@ -52,11 +52,12 @@ export default function TopCards() {
               src={p.image}
               alt={p.name}
               fill
+               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover group-hover:scale-105 transition duration-300"/>
             <div
               className="absolute inset-0 bg-black/20 
               translate-y-full group-hover:translate-y-0 
-              transition-transform duration-500 ease-in-out 
+              transition-transform duration-800 ease-in-out 
               flex items-end justify-center pb-6">
               <p
                 className="text-white text-sm font-semibold

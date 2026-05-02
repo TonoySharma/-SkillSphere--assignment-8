@@ -3,6 +3,7 @@ import { Button, Card } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaChevronRight } from "react-icons/fa";
 import { FcRating } from "react-icons/fc";
 
 const PhotoCard = ({ photo }) => {
@@ -18,8 +19,7 @@ const PhotoCard = ({ photo }) => {
                     height={300}
                     
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="w-full h-[280px] object-cover group-hover:scale-105 transition duration-300"
-                />
+                    className="w-full h-[280px] object-cover group-hover:scale-105 transition duration-300" />
             </div>
 
             {/* Content */}
@@ -41,13 +41,12 @@ const PhotoCard = ({ photo }) => {
                         <Button
                             variant="outline"
                             className="
-                            px-5 py-2 rounded-xl bg-gradient-to-r from-purple-500
+                            px-3 py-2 rounded bg-gradient-to-r from-purple-500
                              to-indigo-500 text-white font-medium 
                              shadow-md hover:shadow-lg hover:scale-105
                               transition-all duration-300 
-                           hover:from-purple-600 hover:to-indigo-600"
-                        >
-                            View Details
+                           hover:from-purple-600 hover:to-indigo-600">
+                            View Details<FaChevronRight />
                         </Button>
                     </Link>
                 </div>
