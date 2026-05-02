@@ -72,6 +72,7 @@ const NavBar = () => {
 
           {user && (
             <div className="flex gap-4 items-center">
+              <span className="text-sm font-medium text-green-500">{user?.name}</span>
               <Avatar size="sm">
                 <Avatar.Image
                   alt="user"
@@ -80,6 +81,7 @@ const NavBar = () => {
                 />
                 <Avatar.Fallback>{user?.name?.[0]}</Avatar.Fallback>
               </Avatar>
+              
 
               <Button
                 size="sm"
@@ -127,7 +129,7 @@ const NavBar = () => {
                   <Avatar.Image src={user?.image} />
                   <Avatar.Fallback>{user?.name?.[0]}</Avatar.Fallback>
                 </Avatar>
-                <span className="text-sm">{user?.name}</span>
+                <span className="text-sm font-medium text-green-500">{user?.name}</span>
               </div>
 
               

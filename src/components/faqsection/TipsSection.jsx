@@ -6,11 +6,14 @@ import { FaBookOpen, FaClock } from "react-icons/fa";
 export default function TipsSection() {
   return (
     <div className="mt-15 px-5 ">
-      
+
       {/* Title */}
-      <h1 className="text-4xl font-bold text-center mb-12 tracking-wide ">
-        📘Learning Tips for Success
-      </h1>
+      <div className="mb-12 ">
+        <h1 className="text-4xl font-bold text-center tracking-wide ">
+          📘Learning Tips for Success
+        </h1>
+        <p className="text-center mt-5 text-gray-600">Boost your learning efficiency with proven study techniques and smart time management</p>
+      </div>
 
       {/* Accordion */}
       <Accordion
@@ -23,7 +26,7 @@ export default function TipsSection() {
             <Accordion.Trigger className="flex items-center gap-3 text-2xl font-semibold transition rounded-xl">
               <FaBookOpen className="text-blue-400 " />
               Study Techniques
-              <Accordion.Indicator  className="text-black"/>
+              <Accordion.Indicator className="text-black" />
             </Accordion.Trigger>
           </Accordion.Heading>
 
@@ -34,7 +37,7 @@ export default function TipsSection() {
                 <li>✔️ Pomodoro - 25min focus + 5min break</li>
                 <li>✔️ Spaced Repetition - revise smartly</li>
                 <li>✔️ Smart Note Taking</li>
-                    <li>✔️ Practice active recall & revision</li>
+                <li>✔️ Practice active recall & revision</li>
                 <li>✔️ Stay consistent every day</li>
               </ul>
             </Accordion.Body>
@@ -47,7 +50,7 @@ export default function TipsSection() {
             <Accordion.Trigger className="flex items-center gap-3 font-semibold  transition rounded-xl text-2xl">
               <FaClock className="text-green-400" />
               Time Management
-              <Accordion.Indicator  className="text-black"/>
+              <Accordion.Indicator className="text-black" />
             </Accordion.Trigger>
           </Accordion.Heading>
 
@@ -60,7 +63,7 @@ export default function TipsSection() {
                 <li>✔️ Use time blocking</li>
                 <li>✔️ Use Pomodoro (25 min focus)</li>
                 <li>✔️Avoid distractions (social media 🚫)</li>
-            
+
               </ul>
             </Accordion.Body>
           </Accordion.Panel>

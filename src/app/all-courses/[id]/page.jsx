@@ -17,7 +17,14 @@ const DetailsCardPage = async ({ params }) => {
 
   return (
     <div className=" px-3 sm:px-4 md:px-0">
+        
       <div className="max-w-7xl mx-auto px-4">
+        
+        <div className='text-center mt-14'>
+          <h1 className='font-bold text-4xl '>Course Details</h1>
+          <p className="text-center mt-5 text-gray-600">A detailed breakdown of skills, lessons, and outcomes you can expect from this course</p>
+        </div>
+
         <div className="my-12 md:my-20 flex flex-col-reverse lg:flex-row items-center gap-10">
 
           {/* LEFT CONTENT */}

@@ -1,5 +1,5 @@
 "use client";
-
+import { motion } from "framer-motion";
 import PhotoCard from '@/components/photocard/PhotoCard';
 import { SearchField } from '@heroui/react';
 import React, { useEffect, useState } from 'react';
@@ -23,33 +23,38 @@ const AllCoursesPage = () => {
     );
 
     return (
+
         <div>
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between max-w-7xl mx-auto gap-4 px-4 mt-10">
+            <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }} >
 
-                <h1 className="my-3 sm:my-5 text-2xl sm:text-3xl font-bold">
-                    🔥 Popular Courses
-                </h1>
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between max-w-7xl mx-auto gap-4 px-4 mt-10">
 
-                <SearchField className="border  w-full sm:w-auto mb-3 flex">
-                    <SearchField.Group className="border rounded-sm px-2 focus-within:ring-0 focus-within:shadow-none">
-                        <SearchField.SearchIcon />
-                        <SearchField.Input
-                            value={search}
-                            onChange={(e) => setSearch(e.target.value)}
-                            placeholder="Search..." />
-                        <SearchField.ClearButton />
-                    </SearchField.Group>
-                </SearchField>
+                        <h1 className="my-3 sm:my-5 text-2xl sm:text-3xl font-bold">🔥 Popular Courses</h1>
+                
+                    <SearchField className="border  w-full sm:w-auto mb-3 flex">
+                        <SearchField.Group className="border rounded-sm px-2 focus-within:ring-0 focus-within:shadow-none">
+                            <SearchField.SearchIcon />
+                            <SearchField.Input
+                                value={search}
+                                onChange={(e) => setSearch(e.target.value)}
+                                placeholder="Search..." />
+                            <SearchField.ClearButton />
+                        </SearchField.Group>
+                    </SearchField>
 
-            </div>
+                </div>
 
-            <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 px-3 sm:px-4 md:px-0 mt-6 mb-15'>
-                {
-                    filteredPhotos.map(photo => (
-                        <PhotoCard key={photo.id} photo={photo} />
-                    ))
-                }
-            </div>
+                <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 px-3 sm:px-4 md:px-0 mt-6 mb-15'>
+                    {
+                        filteredPhotos.map(photo => (
+                            <PhotoCard key={photo.id} photo={photo} />
+                        ))
+                    }
+                </div>
+            </motion.div>
         </div>
     );
 };

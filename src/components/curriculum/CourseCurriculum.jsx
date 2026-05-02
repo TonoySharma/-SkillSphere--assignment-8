@@ -1,5 +1,6 @@
 import { Accordion } from '@heroui/react';
 import React from 'react';
+import { FaHandPointRight } from 'react-icons/fa';
 
 const CourseCurriculum = () => {
     return (
@@ -23,10 +24,10 @@ const CourseCurriculum = () => {
                             <Accordion.Panel>
                                 <Accordion.Body>
                                     <ul className="list-disc pl-5 space-y-1 font-semibold text-xl">
-                                        <li>Introduction to HTML</li>
-                                        <li>HTML Tags & Structure</li>
-                                        <li>Forms & Inputs</li>
-                                        <li>Semantic Elements</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />Introduction to HTML</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />HTML Tags & Structure</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />Forms & Inputs</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />Semantic Elements</li>
                                     </ul>
                                 </Accordion.Body>
                             </Accordion.Panel>
@@ -43,10 +44,10 @@ const CourseCurriculum = () => {
                             <Accordion.Panel>
                                 <Accordion.Body>
                                     <ul className="list-disc pl-5 space-y-1 font-semibold text-xl">
-                                        <li>CSS Basics</li>
-                                        <li>Flexbox & Grid</li>
-                                        <li>Responsive Design</li>
-                                        <li>Tailwind CSS Intro</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />CSS Basics</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />Flexbox & Grid</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />Responsive Design</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />Tailwind CSS Intro</li>
                                     </ul>
                                 </Accordion.Body>
                             </Accordion.Panel>
@@ -63,10 +64,10 @@ const CourseCurriculum = () => {
                             <Accordion.Panel>
                                 <Accordion.Body>
                                     <ul className="list-disc pl-5 space-y-1 font-semibold text-xl">
-                                        <li>Variables & Data Types</li>
-                                        <li>Functions & Events</li>
-                                        <li>DOM Manipulation</li>
-                                        <li>ES6 Features</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />Variables & Data Types</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />Functions & Events</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />DOM Manipulation</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />ES6 Features</li>
                                     </ul>
                                 </Accordion.Body>
                             </Accordion.Panel>
@@ -83,10 +84,10 @@ const CourseCurriculum = () => {
                             <Accordion.Panel>
                                 <Accordion.Body>
                                     <ul className="list-disc pl-5 space-y-1 font-semibold text-xl">
-                                        <li>Components & Props</li>
-                                        <li>useState & useEffect</li>
-                                        <li>Routing</li>
-                                        <li>Project Structure</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />Components & Props</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />useState & useEffect</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />Routing</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />Project Structure</li>
                                     </ul>
                                 </Accordion.Body>
                             </Accordion.Panel>
@@ -103,10 +104,10 @@ const CourseCurriculum = () => {
                             <Accordion.Panel>
                                 <Accordion.Body>
                                     <ul className="list-disc pl-5 space-y-1 font-semibold text-xl">
-                                        <li>Build a Full Website</li>
-                                        <li>Authentication System</li>
-                                        <li>Deploy Project</li>
-                                        <li>Performance Optimization</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />Build a Full Website</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />Authentication System</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />Deploy Project</li>
+                                        <li className='flex items-center gap-2'><FaHandPointRight />Performance Optimization</li>
                                     </ul>
                                 </Accordion.Body>
                             </Accordion.Panel>
