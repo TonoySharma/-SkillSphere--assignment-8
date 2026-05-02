@@ -64,5 +64,50 @@
     "description": "Start earning online with freelancing skills.",
     "image": "https://cdn-res.keymedia.com/cdn-cgi/image/w=1000,h=600,f=auto/https://cdn-res.keymedia.com/cms/images/us/035/0357_638748609215751632.png",
     "category": "Business"
+  },
+   {
+    "id": 7,
+    "title": "Graphic Design Masterclass",
+    "instructor": "David Miller",
+    "duration": "18 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "description": "Learn Photoshop, Illustrator and design principles.",
+    "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d",
+    "category": "Design"
+  },
+  {
+    "id": 8,
+    "title": "Digital Marketing Complete Guide",
+    "instructor": "Emma Wilson",
+    "duration": "14 hours",
+    "rating": 4.6,
+    "level": "Intermediate",
+    "description": "Master SEO, social media marketing and ads.",
+    "image": "https://images.unsplash.com/photo-1557838923-2985c318be48",
+    "category": "Marketing"
+  },
+  {
+    "id": 9,
+    "title": "Python for Beginners",
+    "instructor": "James Anderson",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Start coding with Python from scratch.",
+    "image": "https://images.unsplash.com/photo-1526378722484-bd91ca387e72",
+    "category": "Programming"
+  },
+  {
+    "id": 10,
+    "title": "UI/UX Design Fundamentals",
+    "instructor": "Sophia Lee",
+    "duration": "12 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Learn user experience and interface design basics.",
+    "image": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e",
+    "category": "Design"
   }
+  
 ]

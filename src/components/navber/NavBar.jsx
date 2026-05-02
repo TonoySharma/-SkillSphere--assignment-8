@@ -13,6 +13,9 @@ const NavBar = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
 
+  console.log(user);
+  
+
   const [open, setOpen] = useState(false);
 
   const handleSignOut = async () => {
@@ -27,7 +30,7 @@ const NavBar = () => {
 
         {/* Logo */}
         <div className="flex gap-2 items-center">
-          <Image
+          <Image referrerPolicy="no-referrer"
             src={"/nav.png"}
             alt="logo"
             loading="eager"

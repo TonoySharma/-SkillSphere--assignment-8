@@ -10,7 +10,7 @@ const CourseCurriculum = () => {
                         <h1 className='text-4xl font-bold mb-10'>Course Curriculum</h1>
                     </div>
 
-                    <Accordion allowsMultipleExpanded className="w-full bg-white">
+                    <Accordion allowsMultipleExpanded className="w-full">
 
                         {/* Module 1 */}
                         <Accordion.Item>
