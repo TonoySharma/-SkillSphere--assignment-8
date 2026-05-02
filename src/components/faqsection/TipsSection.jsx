@@ -15,15 +15,15 @@ export default function TipsSection() {
       {/* Accordion */}
       <Accordion
         allowsMultipleExpanded
-        className="w-full max-w-4xl mx-auto backdrop-blur-lg border border-white/20 rounded-2xl p-4 bg-gray-100 ">
+        className="w-full max-w-7xl mx-auto  backdrop-blur-lg border border-white/20 rounded-2xl p-4 bg-gray-100">
 
         {/* Study Techniques */}
-        <Accordion.Item>
+        <Accordion.Item className='py-4'>
           <Accordion.Heading>
             <Accordion.Trigger className="flex items-center gap-3 text-2xl font-semibold transition rounded-xl">
               <FaBookOpen className="text-blue-400 " />
               Study Techniques
-              <Accordion.Indicator  className=""/>
+              <Accordion.Indicator  className="text-black"/>
             </Accordion.Trigger>
           </Accordion.Heading>
 
@@ -42,12 +42,12 @@ export default function TipsSection() {
         </Accordion.Item>
 
         {/* Time Management */}
-        <Accordion.Item>
+        <Accordion.Item className='py-4'>
           <Accordion.Heading>
             <Accordion.Trigger className="flex items-center gap-3 font-semibold  transition rounded-xl text-2xl">
               <FaClock className="text-green-400" />
               Time Management
-              <Accordion.Indicator />
+              <Accordion.Indicator  className="text-black"/>
             </Accordion.Trigger>
           </Accordion.Heading>
 

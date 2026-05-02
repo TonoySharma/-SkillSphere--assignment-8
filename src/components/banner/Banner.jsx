@@ -16,7 +16,7 @@ const images = [
 
 const Banner = () => {
   return (
-    <div className=" overflow-hidden px-3 sm:px-4 md:px-0 max-w-7xl mx-auto ">
+    <div className=" overflow-hidden max-w-7xl mx-auto ">
       <Zoom scale={1.4} indicators={true}>
         {images.map((img, index) => (
           <div key={index} className="relative w-full h-full md:h-[550px] ">

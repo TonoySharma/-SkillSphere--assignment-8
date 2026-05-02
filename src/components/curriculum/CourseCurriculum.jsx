@@ -17,7 +17,7 @@ const CourseCurriculum = () => {
                             <Accordion.Heading>
                                 <Accordion.Trigger>
                                  <p className='font-semibold text-2xl my-5'> HTML Basics</p>
-                                    <Accordion.Indicator />
+                                    <Accordion.Indicator className="text-black" />
                                 </Accordion.Trigger>
                             </Accordion.Heading>
                             <Accordion.Panel>
@@ -37,7 +37,7 @@ const CourseCurriculum = () => {
                             <Accordion.Heading>
                                 <Accordion.Trigger>
                                   <p className='font-semibold text-2xl my-5'> CSS Fundamentals</p>
-                                    <Accordion.Indicator />
+                                    <Accordion.Indicator className="text-black"/>
                                 </Accordion.Trigger>
                             </Accordion.Heading>
                             <Accordion.Panel>
@@ -57,7 +57,7 @@ const CourseCurriculum = () => {
                             <Accordion.Heading>
                                 <Accordion.Trigger>
                                    <p className='font-semibold text-2xl my-5'> JavaScript Essentials</p>
-                                    <Accordion.Indicator />
+                                    <Accordion.Indicator className="text-black"/>
                                 </Accordion.Trigger>
                             </Accordion.Heading>
                             <Accordion.Panel>
@@ -77,7 +77,7 @@ const CourseCurriculum = () => {
                             <Accordion.Heading>
                                 <Accordion.Trigger>
                                   <p className='font-semibold text-2xl my-5'>React Basics</p>
-                                    <Accordion.Indicator />
+                                    <Accordion.Indicator className="text-black"/>
                                 </Accordion.Trigger>
                             </Accordion.Heading>
                             <Accordion.Panel>
@@ -97,7 +97,7 @@ const CourseCurriculum = () => {
                             <Accordion.Heading>
                                 <Accordion.Trigger>
                                    <p className='font-semibold text-2xl my-5'> Final Project</p>
-                                    <Accordion.Indicator />
+                                    <Accordion.Indicator className="text-black"/>
                                 </Accordion.Trigger>
                             </Accordion.Heading>
                             <Accordion.Panel>
