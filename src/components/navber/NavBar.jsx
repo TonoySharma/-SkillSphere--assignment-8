@@ -13,7 +13,7 @@ const NavBar = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
 
-  console.log(user);
+  // console.log(user);
   
 
   const [open, setOpen] = useState(false);
@@ -25,7 +25,7 @@ const NavBar = () => {
 
 
   return (
-    <div className="border-b px-2 sticky top-0 z-40 bg-gray-100">
+    <div className="border px-2 sticky top-0 z-40 bg-gray-50">
       <nav className="flex justify-between items-center py-5 max-w-7xl mx-auto w-full">
 
         {/* Logo */}

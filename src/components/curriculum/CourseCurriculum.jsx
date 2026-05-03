@@ -1,11 +1,13 @@
 import { Accordion } from '@heroui/react';
 import React from 'react';
 import { FaHandPointRight } from 'react-icons/fa';
+import FadeUp from '../FadeUp';
 
 const CourseCurriculum = () => {
     return (
-        <div className=' bg-blue-200/15 p-8'>
-            
+        <FadeUp>
+            <div className=' bg-blue-200/15 p-8'>
+
                 <div className='my-30 max-w-7xl mx-auto'>
                     <div>
                         <h1 className='text-4xl font-bold mb-10'>Course Curriculum</h1>
@@ -17,7 +19,7 @@ const CourseCurriculum = () => {
                         <Accordion.Item>
                             <Accordion.Heading>
                                 <Accordion.Trigger>
-                                 <p className='font-semibold text-2xl my-5'> HTML Basics</p>
+                                    <p className='font-semibold text-2xl my-5'> HTML Basics</p>
                                     <Accordion.Indicator className="text-black" />
                                 </Accordion.Trigger>
                             </Accordion.Heading>
@@ -37,8 +39,8 @@ const CourseCurriculum = () => {
                         <Accordion.Item>
                             <Accordion.Heading>
                                 <Accordion.Trigger>
-                                  <p className='font-semibold text-2xl my-5'> CSS Fundamentals</p>
-                                    <Accordion.Indicator className="text-black"/>
+                                    <p className='font-semibold text-2xl my-5'> CSS Fundamentals</p>
+                                    <Accordion.Indicator className="text-black" />
                                 </Accordion.Trigger>
                             </Accordion.Heading>
                             <Accordion.Panel>
@@ -57,8 +59,8 @@ const CourseCurriculum = () => {
                         <Accordion.Item>
                             <Accordion.Heading>
                                 <Accordion.Trigger>
-                                   <p className='font-semibold text-2xl my-5'> JavaScript Essentials</p>
-                                    <Accordion.Indicator className="text-black"/>
+                                    <p className='font-semibold text-2xl my-5'> JavaScript Essentials</p>
+                                    <Accordion.Indicator className="text-black" />
                                 </Accordion.Trigger>
                             </Accordion.Heading>
                             <Accordion.Panel>
@@ -77,8 +79,8 @@ const CourseCurriculum = () => {
                         <Accordion.Item>
                             <Accordion.Heading>
                                 <Accordion.Trigger>
-                                  <p className='font-semibold text-2xl my-5'>React Basics</p>
-                                    <Accordion.Indicator className="text-black"/>
+                                    <p className='font-semibold text-2xl my-5'>React Basics</p>
+                                    <Accordion.Indicator className="text-black" />
                                 </Accordion.Trigger>
                             </Accordion.Heading>
                             <Accordion.Panel>
@@ -97,8 +99,8 @@ const CourseCurriculum = () => {
                         <Accordion.Item>
                             <Accordion.Heading>
                                 <Accordion.Trigger>
-                                   <p className='font-semibold text-2xl my-5'> Final Project</p>
-                                    <Accordion.Indicator className="text-black"/>
+                                    <p className='font-semibold text-2xl my-5'> Final Project</p>
+                                    <Accordion.Indicator className="text-black" />
                                 </Accordion.Trigger>
                             </Accordion.Heading>
                             <Accordion.Panel>
@@ -115,8 +117,9 @@ const CourseCurriculum = () => {
 
                     </Accordion>
                 </div>
-          
-        </div>
+
+            </div>
+        </FadeUp>
     );
 };
 

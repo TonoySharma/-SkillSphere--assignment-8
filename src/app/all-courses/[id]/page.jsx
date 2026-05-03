@@ -1,9 +1,17 @@
 
 import CourseCurriculum from '@/components/curriculum/CourseCurriculum';
+import FadeUp from '@/components/FadeUp';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { FcRating } from 'react-icons/fc';
 
+
+export const metadata = {
+  title: "Course Details | SkillSphere",
+  description:
+    "Explore detailed course information, instructor insights, and learning outcomes. Start improving your skills today with SkillSphere courses.",
+};
 
 const DetailsCardPage = async ({ params }) => {
   const { id } = await params;
@@ -16,12 +24,18 @@ const DetailsCardPage = async ({ params }) => {
   //  console.log(photo );
 
   return (
+    <FadeUp>
     <div className=" px-3 sm:px-4 md:px-0">
-        
-      <div className="max-w-7xl mx-auto px-4">
-        
-        <div className='text-center mt-14'>
-          <h1 className='font-bold text-4xl '>Course Details</h1>
+         
+      <div className="max-w-7xl mx-auto px-4 mt-14">
+
+        <div>
+          <div className='flex gap-2'>
+          <Link href={'/'}><p className='font-medium hover:underline text-gray-600 hover:text-purple-600'><span>Home /</span></p></Link>
+          <Link href={'/all-courses'}><p className='font-medium hover:underline text-gray-600 hover:text-purple-600'>All Courses</p></Link>
+       
+         </div>
+          <h1 className='font-bold text-4xl text-center'>Course Details</h1>
           <p className="text-center mt-5 text-gray-600">A detailed breakdown of skills, lessons, and outcomes you can expect from this course</p>
         </div>
 
@@ -60,7 +74,7 @@ const DetailsCardPage = async ({ params }) => {
                 <p><span className="font-semibold">Category:</span> {photo.category}</p>
               </div>
 
-              <div className="bg-white shadow-md rounded-xl p-4 hover:shadow-lg transition flex items-center gap-2 col-span-1 sm:col-span-2">
+              <div className="bg-white shadow-md rounded-xl p-4 hover:shadow-lg transition flex items-center gap-2 col-span-1 sm:col-span-2 sm:items-center">
                 <span className="font-semibold">Rating:</span>
                 <FcRating />
                 {photo.rating}
@@ -69,8 +83,6 @@ const DetailsCardPage = async ({ params }) => {
             </div>
 
           </div>
-
-          {/* RIGHT IMAGE */}
           <div className="flex-1 w-full max-w-md lg:max-w-lg ">
             <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-2xl overflow-hidden shadow-lg group ">
 
@@ -92,6 +104,7 @@ const DetailsCardPage = async ({ params }) => {
         <CourseCurriculum></CourseCurriculum>
       </div>
     </div>
+    </FadeUp>
   );
 };
 

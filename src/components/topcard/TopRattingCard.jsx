@@ -1,5 +1,7 @@
 import React from 'react';
 import PhotoCard from '../photocard/PhotoCard';
+import FadeUp from '../FadeUp';
+
 
 const TopRattingCard = async () => {
   const res = await fetch('https://skill-sphere-assignment-8.vercel.app/data.json');
@@ -18,10 +20,12 @@ const TopRattingCard = async () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto gap-6">
-        {topPhotos.map((photo,) => (
-          <div key={photo.id} className="relative">
-            <PhotoCard photo={photo} />
-          </div>
+        {topPhotos.map((photo, index) => (
+          
+            <FadeUp key={photo.id} delay={index * 10}>
+                 <PhotoCard key={photo.id} photo={photo} />
+            </FadeUp>
+         
         ))}
       </div>
     </div>

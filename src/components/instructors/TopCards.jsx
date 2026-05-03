@@ -1,18 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import FadeUp from "../FadeUp";
 
-<h1 className="animate__animated animate__bounce">
-  Welcome
-</h1>
 const instructors = [
   {
     id: 1,
     name: "John Doe",
     title: "Senior Web Developer",
     image: "https://decisionsystemsgroup.github.io/workshop-html/img/john-doe.jpg",
-    rating: 4.9,
   },
   {
     id: 2,
@@ -20,14 +16,14 @@ const instructors = [
     title: "UI/UX Designer",
     image:
       "https://www.scotsman.com/webimg/legacy_elm_42710311.jpg?crop=3:2,smart&trim=&width=640&quality=65&enable=upscale",
-    rating: 4.8,
+   
   },
   {
     id: 3,
     name: "Michael Lee",
     title: "Data Scientist",
     image: "https://event.foundryco.com/wp-content/uploads/sites/10/2025/07/Michael-Lee-scaled-670x670.jpg",
-    rating: 4.7,
+   
   },
   {
     id: 4,
@@ -35,12 +31,13 @@ const instructors = [
     title: "AI Instructor",
     image:
       "https://a57.foxnews.com/static.foxnews.com/foxnews.com/content/uploads/2025/09/1200/675/emma-watson-white-lace.jpg?ve=1&tl=1",
-    rating: 4.9,
+
   },
 ];
 
 export default function TopCards() {
   return (
+    <FadeUp>
     <div className="mt-16 bg-pink-50 px-3 sm:px-4 md:px-0 p-10 ">
 
         <div className=" p-15">
@@ -81,5 +78,6 @@ export default function TopCards() {
           ))}
         </div>
     </div>
+    </FadeUp>
   );
 }

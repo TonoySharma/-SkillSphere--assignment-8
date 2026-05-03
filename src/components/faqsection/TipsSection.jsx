@@ -2,9 +2,11 @@
 
 import { Accordion } from "@heroui/react";
 import { FaBookOpen, FaClock } from "react-icons/fa";
+import FadeUp from "../FadeUp";
 
 export default function TipsSection() {
   return (
+    <FadeUp>
     <div className="mt-15 px-5 ">
 
       {/* Title */}
@@ -70,5 +72,6 @@ export default function TipsSection() {
         </Accordion.Item>
       </Accordion>
     </div>
+    </FadeUp>
   );
 }

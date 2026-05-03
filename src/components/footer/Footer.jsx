@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import FadeUp from "../FadeUp";
 
 const Footer = () => {
   return (
+     <FadeUp>
     <footer className="bg-gray-900 text-gray-300">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 
@@ -68,6 +70,7 @@ const Footer = () => {
 
       </div>
     </footer>
+    </FadeUp>
   );
 };
 

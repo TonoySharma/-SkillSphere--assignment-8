@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import FadeUp from "../FadeUp";
 
 const stats = [
   {
@@ -27,13 +28,13 @@ const stats = [
 
 const Extra = () => {
   return (
+    <FadeUp>
     <div className="bg-[#0b1c3d] py-10 px-5 mt-16">
       <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
         {stats.map((item) => (
           <div
             key={item.id}
-            className="bg-[#0f2a5c] text-center rounded-xl py-6 shadow-md hover:scale-105 transition duration-300"
-          >
+            className="bg-[#0f2a5c] text-center rounded-xl py-6 shadow-md hover:scale-105 transition duration-300">
             <h2 className="text-2xl md:text-3xl font-bold text-white">
               {item.value}
             </h2>
@@ -42,6 +43,7 @@ const Extra = () => {
         ))}
       </div>
     </div>
+    </FadeUp>
   );
 };
 
